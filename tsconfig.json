@@ -7,9 +7,6 @@
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "baseUrl": "./src",
-    "paths": {
-      "components/*": ["components/*", "components"],
-    },
     "strict": false,
     "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": true,

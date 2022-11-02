@@ -12,7 +12,7 @@ interface IArticle {
   updated_at: string;
 }
 
-function useDeltaToView(
+export function useDeltaToView(
   url: string,
   containerRef?: React.MutableRefObject<any>
 ) {
@@ -40,4 +40,3 @@ function useDeltaToView(
   return articleNoContent;
 }
 
-export { useDeltaToView };
