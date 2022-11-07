@@ -3,6 +3,7 @@ import { Header } from "components";
 import { Outlet, Route, Routes } from "react-router-dom";
 import { HomeView } from "views/Home";
 import { CreatePost } from "views/CreatePost";
+import "./components/styles/styles.scss";
 
 export const App = () => (
   <div>
