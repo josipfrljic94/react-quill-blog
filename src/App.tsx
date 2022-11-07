@@ -1,35 +1,20 @@
-import { useRef } from "react";
 import "quill/dist/quill.snow.css"; // Add css for snow theme
-import { PostCard, RichForm } from "components";
-import { useDeltaToView } from "lib/hooks";
+import { Header } from "components";
+import { Outlet, Route, Routes } from "react-router-dom";
+import { HomeView } from "views/Home";
+import { CreatePost } from "views/CreatePost";
 
-export const App = () => {
-  const articleRef = useRef(null);
+export const App = () => (
+  <div>
+    <Header />
 
-  const { title, poster_image } = useDeltaToView(
-    "http://localhost:8000/api/posts/testni-string",
-    articleRef
-  );
-
-  const formInputs = [
-    {
-      name: "title",
-      type: "text",
-    },
-    {
-      name: "description",
-      type: "text",
-    },
-  ];
-
-  return (
-    <div>
-      <RichForm formSchema={formInputs} />
-      <PostCard
-        title={title}
-        posterImage={poster_image}
-        elementReference={articleRef}
-      />
+    <div className="layout-container">
+      <Routes>
+        <Route path="/" element={<Outlet />}>
+          <Route index path="home" element={<HomeView />} />
+          <Route path="create" element={<CreatePost />} />
+        </Route>
+      </Routes>
     </div>
-  );
-};
+  </div>
+);

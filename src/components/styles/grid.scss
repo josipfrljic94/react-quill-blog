@@ -1,0 +1,76 @@
+@mixin col($col){
+    flex:0 0 calc(($col/12) * 100%);
+}
+
+@mixin alI($val){
+    align-items: $val;
+}
+
+.grid{
+    display: flex;
+
+    &.s-b{
+        justify-content: space-between;
+    }
+    &.s-a{
+        justify-content: space-around;
+    }
+    &.center{
+        justify-content: center;
+    }
+
+    &.f-s{
+        justify-content: flex-start;
+    }
+    &.f-e{
+        justify-content: flex-end;
+    }
+
+    &.a-i-f-s{
+        @include alI(flex-start);
+    }
+
+    &.a-i-f-e{
+        @include alI(flex-end);
+    }
+
+    &.a-i-c{
+        @include alI(center);
+    }
+
+
+    &>.col{
+        flex: 1;
+        &.col.ml-1{
+            @include col(1);
+        }
+
+        &.col.ml-2{
+            @include col(2);
+        }
+
+        &.col.ml-3{
+            @include col(3);
+        }
+
+        &.col.ml-4{
+            @include col(4);
+        }
+
+        &.col.ml-5{
+            @include col(5);
+        }
+
+        &.col.ml-6{
+            @include col(6);
+        }
+
+        &.col.ml-7{
+            @include col(7);
+        }
+
+        &.col.ml-8{
+            @include col(8);
+        }
+    }
+}

@@ -1,16 +1,6 @@
+import { IArticle } from "interfaces";
 import { useEffect, useState } from "react";
 import { quillGetHTML } from "../modules/hendler";
-
-interface IArticle {
-  content: any;
-  created_at: string;
-  description: string;
-  poster_image: string;
-  id: string;
-  slug: string;
-  title: string;
-  updated_at: string;
-}
 
 export function useDeltaToView(
   url: string,
@@ -39,4 +29,3 @@ export function useDeltaToView(
   }, [containerRef, url]);
   return articleNoContent;
 }
-

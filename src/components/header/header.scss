@@ -1,0 +1,26 @@
+.app-bar{
+    height: 50px;
+    border-bottom: 1px solid #dee0e1;
+
+    &>.logo-box{
+        font-size: 18px;
+        &>svg{
+            width: 66px;
+            height: 40px;
+            fill: #b92b27;
+        }
+    }
+    &>.app-bar-nav{
+        height: 100%;
+
+        .list-item{
+            color: #b92b27;
+            font-size: 14px;
+            list-style: none;
+            text-decoration: none;
+            &>a{
+                text-decoration: none;
+            }
+        }
+    }
+}
